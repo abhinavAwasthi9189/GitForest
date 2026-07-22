@@ -1,0 +1,12 @@
+**/*.rs.bk
+# Rust build artifacts
+target/
+
+# Cargo lockfile (ignore for binaries, keep for libraries)
+Cargo.lock
+
+# IDE and environment files (optional but recommended)
+.vscode/
+.idea/
+.env
+
