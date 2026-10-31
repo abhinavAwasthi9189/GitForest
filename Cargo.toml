@@ -9,4 +9,12 @@ serde_json = "1.0.151"
 rustls = { version = "0.23", features = ["ring"] }
 octocrab = {version="0.54.0", features = ["rustls", "jwt-rust-crypto"]}
 tokio = { version = "1.53.1", features = ["rt-multi-thread"] }
+bevy = { version = "0.18", default-features = false, features = ["2d","ui"] }
+rand = "0.10.1"
+# Enable a small amount of optimization in the dev profile.
+[profile.dev]
+opt-level = 1
 
+# Enable a large amount of optimization in the dev profile for dependencies.
+[profile.dev.package."*"]
+opt-level = 3
